@@ -40,4 +40,19 @@ class TargetSearch {
         for (int i=0; i<arr.length;i++)
             System.out.print(arr[i]+", ");
     }
+
+    //below is the brute force method with complexity O(n^2)
+    public int[] twoSum(int[] nums, int target) {
+        for (int i=0;i<nums.length;i++){
+            for(int j=0;j<nums.length;j++){
+                if((i != j) && ((nums[i]+nums[j]) == target)){
+                    int [] r = {i,j};
+                    return (r);
+                    //break;
+                }
+            }
+        }
+        int [] r = {0,0};
+        return (r);
+    }
 }
